@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Estudos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Agenda de Estudos</h1>
+    </header>
+    <div class="container">
+        <div class="form-control">
+            <input type="text" id="disciplina" placeholder="Disciplina">
+            <input type="text" id="dia" placeholder="Dia (ex: segunda)">
+            <input type="time" id="hora">
+            <select id="prioridade">
+                <option value="high">Alta</option>
+                <option value="medium">Média</option>
+                <option value="low">Baixa</option>
+            </select>
+            <button onclick="adicionarEstudo()">Adicionar</button>
+        </div>
+
+        <table id="tabelaEstudos">
+            <thead>
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Dia</th>
+                    <th>Hora</th>
+                    <th>Prioridade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas adicionadas dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
