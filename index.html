@@ -2,43 +2,41 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agenda de Estudos</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Agenda de Estudos - Semana</h1>
-      <div class="priority-legend">
-        <span class="priority high">Alta</span>
-        <span class="priority medium">Média</span>
-        <span class="priority low">Baixa</span>
-      </div>
-    </header>
+  <header>
+    <h1>Agenda de Estudos - Semana</h1>
+    <div class="priority-key">
+      <div class="priority high">ALTA</div>
+      <div class="priority medium">MÉDIA</div>
+      <div class="priority low">BAIXA</div>
+    </div>
+  </header>
 
-    <table class="schedule">
-      <thead>
-        <tr>
-          <th>Horário</th>
-          <th>Segunda</th>
-          <th>Terça</th>
-          <th>Quarta</th>
-          <th>Quinta</th>
-          <th>Sexta</th>
-          <th>Sábado</th>
-          <th>Domingo</th>
-        </tr>
-      </thead>
-      <tbody id="schedule-body">
-        <!-- Linhas preenchidas por JavaScript -->
-      </tbody>
-    </table>
+  <table class="schedule">
+    <thead>
+      <tr>
+        <th>Horário</th>
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+      </tr>
+    </thead>
+    <tbody id="agenda-corpo"></tbody>
+  </table>
 
-    <section class="form-section">
-      <h2>Adicionar Tarefa</h2>
-      <form id="task-form">
-        <label for="dia">Dia:</label>
-        <select id="dia" required>
+  <section class="add-task">
+    <h2>Adicionar Tarefa</h2>
+    <form id="form-tarefa">
+      <label>Dia:
+        <select id="dia">
           <option value="1">Segunda</option>
           <option value="2">Terça</option>
           <option value="3">Quarta</option>
@@ -47,27 +45,28 @@
           <option value="6">Sábado</option>
           <option value="7">Domingo</option>
         </select>
+      </label>
 
-        <label for="hora">Horário:</label>
+      <label>Horário:
         <input type="time" id="hora" required>
+      </label>
 
-        <label for="descricao">Descrição:</label>
+      <label>Descrição:
         <input type="text" id="descricao" placeholder="Digite sua tarefa..." required>
+      </label>
 
-        <label for="prioridade">Prioridade:</label>
+      <label>Prioridade:
         <select id="prioridade">
-          <option value="alta">Alta</option>
-          <option value="media">Média</option>
-          <option value="baixa">Baixa</option>
+          <option value="high">Alta</option>
+          <option value="medium">Média</option>
+          <option value="low">Baixa</option>
         </select>
+      </label>
 
-        <button type="submit">Adicionar</button>
-      </form>
-    </section>
-  </div>
+      <button type="submit">Adicionar</button>
+    </form>
+  </section>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
