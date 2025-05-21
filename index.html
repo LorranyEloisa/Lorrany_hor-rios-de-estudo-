@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda de Estudos</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Agenda de Estudos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="container">
     <header>
-        <h1>Agenda de Estudos</h1>
+      <h1>Agenda de Estudos - Semana</h1>
+      <div class="priority-legend">
+        <span class="priority high">Alta</span>
+        <span class="priority medium">Média</span>
+        <span class="priority low">Baixa</span>
+      </div>
     </header>
-    <div class="container">
-        <div class="form-control">
-            <input type="text" id="disciplina" placeholder="Disciplina">
-            <input type="text" id="dia" placeholder="Dia (ex: segunda)">
-            <input type="time" id="hora">
-            <select id="prioridade">
-                <option value="high">Alta</option>
-                <option value="medium">Média</option>
-                <option value="low">Baixa</option>
-            </select>
-            <button onclick="adicionarEstudo()">Adicionar</button>
-        </div>
 
-        <table id="tabelaEstudos">
-            <thead>
-                <tr>
-                    <th>Disciplina</th>
-                    <th>Dia</th>
-                    <th>Hora</th>
-                    <th>Prioridade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Linhas adicionadas dinamicamente -->
-            </tbody>
-        </table>
-    </div>
+    <table class="schedule">
+      <thead>
+        <tr>
+          <th>Horário</th>
+          <th>Segunda</th>
+          <th>Terça</th>
+          <th>Quarta</th>
+          <th>Quinta</th>
+          <th>Sexta</th>
+          <th>Sábado</th>
+          <th>Domingo</th>
+        </tr>
+      </thead>
+      <tbody id="schedule-body">
+        <!-- Linhas preenchidas por JavaScript -->
+      </tbody>
+    </table>
 
-    <script src="script.js"></script>
+    <section class="form-section">
+      <h2>Adicionar Tarefa</h2>
+      <form id="task-form">
+        <label for="dia">Dia:</label>
+        <select id="dia" required>
+          <option value="1">Segunda</option>
+          <option value="2">Terça</option>
+          <option value="3">Quarta</option>
+          <option value="4">Quinta</option>
+          <option value="5">Sexta</option>
+          <option value="6">Sábado</option>
+          <option value="7">Domingo</option>
+        </select>
+
+        <label for="hora">Horário:</label>
+        <input type="time" id="hora" required>
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" placeholder="Digite sua tarefa..." required>
+
+        <label for="prioridade">Prioridade:</label>
+        <select id="prioridade">
+          <option value="alta">Alta</option>
+          <option value="media">Média</option>
+          <option value="baixa">Baixa</option>
+        </select>
+
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
+

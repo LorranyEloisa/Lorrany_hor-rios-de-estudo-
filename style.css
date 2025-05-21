@@ -1,56 +1,109 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    background: #f4f7f9;
     margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #4CAF50;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .priority-legend {
+    margin-top: 10px;
+  }
+  
+  .priority {
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 10px;
     color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.container {
-    padding: 20px;
-}
-
-table {
+    font-weight: bold;
+  }
+  
+  .priority.high {
+    background-color: #d9534f;
+  }
+  
+  .priority.medium {
+    background-color: #f0ad4e;
+  }
+  
+  .priority.low {
+    background-color: #5bc0de;
+  }
+  
+  table.schedule {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-}
-
-th, td {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  table.schedule th,
+  table.schedule td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-}
-
-th {
-    background-color: #eee;
-}
-
-.high {
-    background-color: #ff9999;
-}
-
-.medium {
-    background-color: #ffe699;
-}
-
-.low {
-    background-color: #c2f0c2;
-}
-
-.form-control {
-    margin-top: 10px;
+    vertical-align: top;
+    height: 60px;
+  }
+  
+  table.schedule th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .form-section {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  form {
     display: flex;
-    gap: 10px;
     flex-wrap: wrap;
-}
+    gap: 10px;
+    align-items: center;
+  }
+  
+  form input,
+  form select,
+  form button {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #218838;
+  }
+  
+  .task {
+    padding: 4px;
+    margin-top: 4px;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
+  }
+  
+  
 
-input, select, button {
-    padding: 5px;
-}
